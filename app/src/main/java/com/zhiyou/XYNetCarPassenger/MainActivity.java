@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Activity mContext=new MainActivity();
+                final Activity mContext=MainActivity.this;
                 JPay.getIntance(mContext).toPay(JPay.PayMode.WXPAY, "{\"appid\":\"wx79cc19454ba2e253\",\"noncestr\":\"32746497175732391081\",\"package\":\"Sign=WXPay\",\"partnerid\":\"1403463602\",\"prepayid\":\"wx201712221634106056b47d0d0944216168\",\"sign\":\"6B1FD3C185C235E8C1D42B3008218B24\",\"timestamp\":\"1513931635\"}", new JPay.JPayListener() {
                     @Override
                     public void onPaySuccess() {
